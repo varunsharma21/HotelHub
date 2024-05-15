@@ -58,6 +58,7 @@ const HotelContextProvider = ({ children }) => {
     hotelsInfo,
     setHotelsInfo,
     setIsLoading,
+    fetchHotelData,
   };
 
   return (

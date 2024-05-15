@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import TextField from "@mui/material/TextField";
 import styles from "./AddHotel.module.css";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { hotelContext } from "../store/HotelInfoProvider";
 
 const inputInfo = [
   { label: "Hotel Name", stateKey: "hotel" },
@@ -27,6 +29,12 @@ const AddHotel = () => {
   };
 
   const [formData, setFormData] = useState(initialState);
+  const { fetchHotelData } = useContext(hotelContext);
+  const navigate = useNavigate();
+
+  const backToHotels = () => {
+    navigate("/");
+  };
 
   const handleChange = (e, stateKey) => {
     const value = e.target.value;
@@ -70,16 +78,21 @@ const AddHotel = () => {
       const data = await response.json();
       console.log("Data:", data);
 
-      // fetching new data again.
+      // Fetching data again to render recently added hotel on homepage.
+      fetchHotelData();
     } catch (error) {
       console.error("Error:", error.message);
     }
     console.log(formData);
-    // setFormData(initialState);
+    setFormData(initialState);
+    // navigate("/");
   };
 
   return (
     <div className={styles.container}>
+      <Button onClick={backToHotels} variant="contained" color="primary">
+        Show Hotels
+      </Button>
       <form onSubmit={submitHandler}>
         {inputInfo.map((info, index) => (
           <TextField
@@ -93,7 +106,7 @@ const AddHotel = () => {
           />
         ))}
         <Button type="submit" variant="contained" color="primary">
-          Submit
+          Add Hotel
         </Button>
       </form>
     </div>
