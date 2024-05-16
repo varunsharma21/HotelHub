@@ -3,6 +3,12 @@
   flex-direction: column;
 }
 
+.filter {
+  height: 50vh;
+  background-color: #fc3b5f;
+  clip-path: polygon(0% 100%, 100% 75%, 100% 0%, 0% 0%);
+}
+
 .add-hotel {
   width: 10%;
   margin: 20px 0 0 15% !important;

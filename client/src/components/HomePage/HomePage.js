@@ -6,6 +6,7 @@ import LinearProgress from "@mui/material/LinearProgress";
 import hotelImage from "./../../resources/hotel-image.jpg";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const HomePage = () => {
   const ctx = useContext(hotelContext);
@@ -13,7 +14,8 @@ const HomePage = () => {
   // console.log(ctx);
   return (
     <div className={styles.container}>
-      <img className={styles.hotelImage} src={hotelImage} alt="hotel" />
+      <div className={styles.filter}></div>
+      {/* <img className={styles.hotelImage} src={hotelImage} alt="hotel" /> */}
       <Button
         className={styles["add-hotel"]}
         onClick={() => navigate("/add-hotel")}
