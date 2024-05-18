@@ -1,0 +1,50 @@
+.details-card {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 90%;
+  background-color: rgb(245, 242, 243);
+  margin: 10vh 0 0 5%;
+  border-radius: 20px;
+  border: 1px solid grey;
+}
+
+.hotel-info p {
+  margin-left: 5%;
+}
+
+.name {
+  margin: 10px 0 10px 0;
+  font-size: 35px;
+}
+
+.city {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.rating {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.category {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.contactNumber {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.minPrice,
+.maxPrice {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.address {
+  margin-bottom: 10px;
+  font-size: 20px;
+}

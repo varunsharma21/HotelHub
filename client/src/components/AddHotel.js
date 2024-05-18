@@ -90,12 +90,18 @@ const AddHotel = () => {
 
   return (
     <div className={styles.container}>
-      <Button onClick={backToHotels} variant="contained" color="primary">
+      <Button
+        className={styles.showHotels}
+        onClick={backToHotels}
+        variant="contained"
+        color="primary"
+      >
         Show Hotels
       </Button>
-      <form onSubmit={submitHandler}>
+      <form className={styles.form} onSubmit={submitHandler}>
         {inputInfo.map((info, index) => (
           <TextField
+            className={styles.input}
             key={index}
             value={formData[info.stateKey]}
             onChange={(e) => handleChange(e, info.stateKey)}

@@ -1,12 +1,33 @@
 .container {
   height: 100vh;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 40%;
+  margin: 8% 0 0 5%;
+  /* gap: 20px; */
+}
+
+.form Button {
+  background-color: black !important;
+  margin-top: 20px;
+  grid-column: 1 / -1; /* Span the button across all columns */
+  justify-self: center;
+  width: 200px;
+}
+
+.input {
+  width: 250px;
+  margin: 20px;
+}
+
+.showHotels {
+  margin: 20px 0 0 20px;
+  background-color: black !important;
 }
