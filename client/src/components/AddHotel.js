@@ -88,33 +88,42 @@ const AddHotel = () => {
     // navigate("/");
   };
 
+  const imageUploadHandler = (e) => {
+    console.log(e.target.files[0]);
+  };
+
   return (
     <div className={styles.container}>
-      <Button
-        className={styles.showHotels}
-        onClick={backToHotels}
-        variant="contained"
-        color="primary"
-      >
-        Show Hotels
-      </Button>
-      <form className={styles.form} onSubmit={submitHandler}>
-        {inputInfo.map((info, index) => (
-          <TextField
-            className={styles.input}
-            key={index}
-            value={formData[info.stateKey]}
-            onChange={(e) => handleChange(e, info.stateKey)}
-            required={true}
-            id="outlined-basic"
-            label={info.label}
-            variant="outlined"
-          />
-        ))}
-        <Button type="submit" variant="contained" color="primary">
-          Add Hotel
+      <div className={styles.left}>
+        <Button
+          className={styles.showHotels}
+          onClick={backToHotels}
+          variant="contained"
+          color="primary"
+        >
+          Show Hotels
         </Button>
-      </form>
+
+        <input type="file" onChange={imageUploadHandler} />
+        <form className={styles.form} onSubmit={submitHandler}>
+          {inputInfo.map((info, index) => (
+            <TextField
+              className={styles.input}
+              key={index}
+              value={formData[info.stateKey]}
+              onChange={(e) => handleChange(e, info.stateKey)}
+              required={true}
+              id="outlined-basic"
+              label={info.label}
+              variant="outlined"
+            />
+          ))}
+          <Button type="submit" variant="contained" color="primary">
+            Add Hotel
+          </Button>
+        </form>
+      </div>
+      <div className={styles.right}></div>
     </div>
   );
 };
