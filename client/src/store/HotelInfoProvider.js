@@ -8,6 +8,8 @@ const HotelContextProvider = ({ children }) => {
   const [error, setError] = useState(null);
 
   const [hotelsInfo, setHotelsInfo] = useState();
+  const [priceFilter, setPriceFilter] = useState(50000);
+  const [locationFilter, setLocationFilter] = useState("");
 
   const fetchHotelData = async () => {
     setIsLoading(true);
@@ -56,9 +58,13 @@ const HotelContextProvider = ({ children }) => {
     isLoading,
     error,
     hotelsInfo,
+    priceFilter,
+    locationFilter,
     setHotelsInfo,
     setIsLoading,
     fetchHotelData,
+    setPriceFilter,
+    setLocationFilter,
   };
 
   return (
