@@ -1,0 +1,23 @@
+.container {
+  height: 10vh;
+  background-color: #fc3b5f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container p {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  margin: 0 0 0 5%;
+}
+
+.add-hotel {
+  width: 170px;
+  margin: 0 5% 0 0 !important;
+  background-color: black !important;
+  border-radius: 10px !important;
+  font-size: 13px;
+}

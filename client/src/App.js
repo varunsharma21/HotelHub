@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AddHotel from "./components/AddHotel";
+import AddHotel from "./../src/components/AddHotel/AddHotel";
 import HotelContextProvider from "./store/HotelInfoProvider";
 import HomePage from "./components/HomePage/HomePage";
 import Details from "./components/Details/Details";

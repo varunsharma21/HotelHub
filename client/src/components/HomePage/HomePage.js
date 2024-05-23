@@ -1,16 +1,28 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import styles from "./HomePage.module.css";
 import { hotelContext } from "./../../store/HotelInfoProvider";
 import HotelCard from "../HotelCard/HotelCard";
 import LinearProgress from "@mui/material/LinearProgress";
-import { useNavigate } from "react-router-dom";
-import { Button, Slider, TextField } from "@mui/material";
-// import Slider from '@mui/material/Slider';
+import { Slider, TextField } from "@mui/material";
+
+import mumbai from "./../../resources/gate.png";
+import bali from "./../../resources/bali.png";
+import newYork from "./../../resources/statue-of-liberty.png";
+import london from "./../../resources/big-ben.png";
+import paris from "./../../resources/eiffel-tower.png";
+import CityCard from "../CityCard/CityCard";
+import Header from "../Header/Header";
+
+const famousLocations = [
+  { city: "Bali", photo: bali },
+  { city: "Mumbai", photo: mumbai },
+  { city: "Paris", photo: paris },
+  { city: "New York", photo: newYork },
+  { city: "London", photo: london },
+];
 
 const HomePage = () => {
   const ctx = useContext(hotelContext);
-  const navigate = useNavigate();
-  // console.log(ctx);
 
   const priceFilterHandler = (e, newValue) => {
     console.log(`price will change to ${newValue}`);
@@ -27,15 +39,13 @@ const HomePage = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles["famous-destinations"]}></div>
-      <Button
-        className={styles["add-hotel"]}
-        onClick={() => navigate("/add-hotel")}
-        variant="contained"
-        color="primary"
-      >
-        Add your Hotel
-      </Button>
+      <Header />
+      <div className={styles["famous-destinations"]}>
+        {famousLocations.map((city) => (
+          <CityCard photo={city.photo} city={city.city} />
+        ))}
+      </div>
+
       <p className={styles["filter-heading"]}>Filters</p>
       <div className={styles["filters"]}>
         <div className={styles["location-filter"]}>

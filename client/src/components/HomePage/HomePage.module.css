@@ -5,15 +5,13 @@
 
 .famous-destinations {
   height: 20vh;
-  background-color: #fc3b5f;
-  clip-path: polygon(0% 100%, 100% 75%, 100% 0%, 0% 0%);
-}
-
-.add-hotel {
-  width: 12%;
-  margin: 20px 0 0 15% !important;
-  background-color: black !important;
-  border-radius: 10px !important;
+  background-color: rgb(245, 242, 243);
+  /* background-color: #fc3b5f; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  /* clip-path: polygon(0% 100%, 100% 75%, 100% 0%, 0% 0%); */
 }
 
 .hotelImage {
@@ -33,6 +31,7 @@
 .slider {
   width: 90%;
   margin: 30px 0 20px 0;
+  color: black !important;
 }
 
 .input {
