@@ -104,7 +104,7 @@ const AddHotel = () => {
           Show Hotels
         </Button>
 
-        <input type="file" onChange={imageUploadHandler} />
+        {/* <input type="file" onChange={imageUploadHandler} /> */}
         <form className={styles.form} onSubmit={submitHandler}>
           {inputInfo.map((info, index) => (
             <TextField

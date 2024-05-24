@@ -49,14 +49,14 @@ const HomePage = () => {
       <p className={styles["filter-heading"]}>Filters</p>
       <div className={styles["filters"]}>
         <div className={styles["location-filter"]}>
-          <p className={styles.label}>Search By City</p>
+          <p className={styles.label}>Search Destination</p>
           <TextField
             className={styles.input}
             value={ctx.locationFilter}
             onChange={(e) => ctx.setLocationFilter(e.target.value)}
             required={false}
             id="outlined-basic"
-            label="Search Location"
+            label="Search City"
             variant="outlined"
           />
         </div>

@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 0 0;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container-left {
+  width: 37%;
+}
+
+.container-right img {
+  height: 50vh;
+}
+
+.highlight {
+  font-size: 120px;
+  color: #3c4855;
+}
+
+.message {
+  font-size: 40px;
+  color: #3c4855;
+  margin: 20px 0 0 0;
+}
+
+.error-code {
+  font-size: 20px;
+  margin: 20px 0 0 0;
+  font-weight: bold;
+  color: grey;
+}
