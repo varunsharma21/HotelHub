@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./HotelCard.module.css";
-import location from "./../../resources/location-emoji.png";
+import star from "./../../resources/star.png";
 import { useNavigate } from "react-router-dom";
 
 const HotelCard = (props) => {
@@ -16,6 +16,7 @@ const HotelCard = (props) => {
     starRating,
     maxPrice,
     minPrice,
+    photo,
   } = props;
 
   const showDetails = () => {
@@ -31,18 +32,25 @@ const HotelCard = (props) => {
         starRating,
         maxPrice,
         minPrice,
+        photo,
       },
     });
   };
 
   return (
     <div className={styles.container} onClick={showDetails}>
-      <p className={styles["hotel-name"]}>{hotelName}</p>
-      <p className={styles.city}>
-        <img className={styles["location-emoji"]} src={location} alt="" />
-        {city}
+      <img src={photo} alt="hotel" />
+      <div className={styles["hotel-name"]}>
+        <p>{hotelName}</p>
+        <p className={styles.starRating}>
+          <img src={star} alt="star" />
+          {starRating}
+        </p>
+      </div>
+      <p className={styles.city}>{city}</p>
+      <p className={styles.price}>
+        <span className={styles.minPrice}>₹ {minPrice}</span> / night
       </p>
-      <p className={styles.rating}>{starRating}/5 ⭐</p>
     </div>
   );
 };

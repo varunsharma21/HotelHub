@@ -34,6 +34,7 @@ const HotelContextProvider = ({ children }) => {
           starRating: hotel.starRating,
           minPrice: hotel.minPrice,
           maxPrice: hotel.maxPrice,
+          photo: hotel.photo,
         };
       });
       // console.log(transformedData);

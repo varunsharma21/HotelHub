@@ -85,7 +85,8 @@ const HomePage = () => {
       )}
       <hr />
 
-      {ctx.locationFilter === "" && (
+      {ctx.locationFilter === "" && ctx.hotelsInfo && (
+        // Instead of this show full list
         <p className={styles.message}>Search a destination</p>
       )}
       {ctx.locationFilter !== "" && filteredHotel.length === 0 && (
@@ -94,22 +95,25 @@ const HomePage = () => {
         </p>
       )}
 
-      {filteredHotel.length > 0 &&
-        filteredHotel.map((hotel, idx) => (
-          <HotelCard
-            key={idx}
-            id={hotel.id}
-            hotelName={hotel.hotelName}
-            address={hotel.address}
-            city={hotel.city}
-            contactNumber={hotel.contactNumber}
-            category={hotel.category}
-            starRating={hotel.starRating}
-            maxPrice={hotel.maxPrice}
-            minPrice={hotel.minPrice}
-          />
-        ))}
-      {ctx.error && <p>Error: {ctx.error}</p>}
+      <div className={styles["hotels-grid"]}>
+        {filteredHotel.length > 0 &&
+          filteredHotel.map((hotel, idx) => (
+            <HotelCard
+              key={idx}
+              id={hotel.id}
+              hotelName={hotel.hotelName}
+              address={hotel.address}
+              city={hotel.city}
+              contactNumber={hotel.contactNumber}
+              category={hotel.category}
+              starRating={hotel.starRating}
+              maxPrice={hotel.maxPrice}
+              minPrice={hotel.minPrice}
+              photo={hotel.photo}
+            />
+          ))}
+        {ctx.error && <p>Error: {ctx.error}</p>}
+      </div>
     </div>
   );
 };

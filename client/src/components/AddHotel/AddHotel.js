@@ -1,9 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import styles from "./AddHotel.module.css";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { hotelContext } from "../../store/HotelInfoProvider";
+import ImagePicker from "../ImagePicker/ImagePicker";
 
 const inputInfo = [
   { label: "Hotel Name", stateKey: "hotel" },
@@ -28,9 +29,11 @@ const AddHotel = () => {
     starRating: "",
   };
 
-  const [formData, setFormData] = useState(initialState);
   const { fetchHotelData } = useContext(hotelContext);
   const navigate = useNavigate();
+
+  const [formData, setFormData] = useState(initialState);
+  const [image, setImage] = useState();
 
   const backToHotels = () => {
     navigate("/");
@@ -66,6 +69,7 @@ const AddHotel = () => {
           starRating: formData.starRating,
           maxPrice: formData.maxPrice,
           minPrice: formData.minPrice,
+          photo: image,
         }),
       });
 
@@ -88,9 +92,13 @@ const AddHotel = () => {
     // navigate("/");
   };
 
-  const imageUploadHandler = (e) => {
-    console.log(e.target.files[0]);
+  const handleImageChange = (newImage) => {
+    setImage(newImage);
   };
+
+  useEffect(() => {
+    console.log(image);
+  }, [image]);
 
   return (
     <div className={styles.container}>
@@ -106,6 +114,7 @@ const AddHotel = () => {
 
         {/* <input type="file" onChange={imageUploadHandler} /> */}
         <form className={styles.form} onSubmit={submitHandler}>
+          <ImagePicker onImageChange={handleImageChange} />
           {inputInfo.map((info, index) => (
             <TextField
               className={styles.input}
