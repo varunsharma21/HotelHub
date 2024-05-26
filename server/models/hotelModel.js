@@ -37,6 +37,10 @@ const hotelSchema = new mongoose.Schema({
     type: Number,
     required: [true, "Min price is required."],
   },
+  photo: {
+    type: String,
+    required: [true, "A photo is required."],
+  },
 });
 
 const Hotel = mongoose.model("Hotel", hotelSchema);
