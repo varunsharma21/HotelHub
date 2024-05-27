@@ -39,7 +39,7 @@ const HotelCard = (props) => {
 
   return (
     <div className={styles.container} onClick={showDetails}>
-      <img src={photo} alt="hotel" />
+      <img className={styles.hotelImage} src={photo} alt="hotel" />
       <div className={styles["hotel-name"]}>
         <p>{hotelName}</p>
         <p className={styles.starRating}>

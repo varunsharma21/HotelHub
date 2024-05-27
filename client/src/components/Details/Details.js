@@ -10,6 +10,7 @@ const Details = () => {
   return (
     <div className={styles.container}>
       <div className={styles["details-card"]}>
+        <img src={state.photo} alt="" />
         <div className={styles["hotel-info"]}>
           <p className={styles.name}>{state.hotelName}</p>
           <p className={styles.city}> {state.city}</p>

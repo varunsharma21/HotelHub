@@ -29,9 +29,15 @@ const HomePage = () => {
     ctx.setPriceFilter(newValue);
   };
 
-  const applyFilters = (hotel) =>
-    hotel.minPrice <= ctx.priceFilter &&
-    hotel.city.toLowerCase().trim() === ctx.locationFilter.toLowerCase().trim();
+  const applyFilters = (hotel) => {
+    const locationMatch =
+      ctx.locationFilter.trim() === "" ||
+      hotel.city.toLowerCase().trim() ===
+        ctx.locationFilter.toLowerCase().trim();
+    const priceMatch = hotel.minPrice <= ctx.priceFilter;
+
+    return locationMatch && priceMatch;
+  };
 
   const filteredHotel = ctx.hotelsInfo
     ? ctx.hotelsInfo.filter((hotel) => applyFilters(hotel))
@@ -42,7 +48,7 @@ const HomePage = () => {
       <Header />
       <div className={styles["famous-destinations"]}>
         {famousLocations.map((city) => (
-          <CityCard photo={city.photo} city={city.city} />
+          <CityCard photo={city.photo} city={city.city} key={city.city} />
         ))}
       </div>
 
@@ -66,10 +72,9 @@ const HomePage = () => {
             className={styles.slider}
             onChange={priceFilterHandler}
             value={ctx.priceFilter}
-            aria-label="Temperature"
+            aria-label="Price"
             defaultValue={5000}
             valueLabelDisplay="auto"
-            shiftStep={30}
             step={1000}
             marks
             min={1000}
@@ -85,10 +90,6 @@ const HomePage = () => {
       )}
       <hr />
 
-      {ctx.locationFilter === "" && ctx.hotelsInfo && (
-        // Instead of this show full list
-        <p className={styles.message}>Search a destination</p>
-      )}
       {ctx.locationFilter !== "" && filteredHotel.length === 0 && (
         <p className={styles.message}>
           No Hotels in '{ctx.locationFilter}' found

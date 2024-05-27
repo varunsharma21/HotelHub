@@ -37,7 +37,6 @@ const HotelContextProvider = ({ children }) => {
           photo: hotel.photo,
         };
       });
-      // console.log(transformedData);
       setHotelsInfo(transformedData);
     } catch (err) {
       console.log("hello");

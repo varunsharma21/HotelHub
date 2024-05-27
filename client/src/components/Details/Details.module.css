@@ -1,16 +1,30 @@
+.container {
+  background-color: rgb(241, 239, 238);
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .details-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 80vh;
   width: 90%;
   background-color: rgb(245, 242, 243);
-  margin: 10vh 0 0 5%;
   border-radius: 20px;
   border: 1px solid grey;
+  z-index: 1;
+  /* clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%); */
 
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.details-card img {
+  border-radius: 20px 0 0 20px;
 }
 
 .hotel-info p {

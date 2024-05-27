@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Header.module.css";
-import { Button, Slider, TextField } from "@mui/material";
+import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -8,9 +8,12 @@ const Header = () => {
 
   return (
     <div className={styles.container}>
-      <p>Hotel Hub</p>
+      <div className={styles.logo}>
+        <p>Hotel Hub</p>
+      </div>
+
       <Button
-        className={styles["add-hotel"]}
+        className={styles["add-hotel-btn"]}
         onClick={() => navigate("/add-hotel")}
         variant="contained"
         color="primary"

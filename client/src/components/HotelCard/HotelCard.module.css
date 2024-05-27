@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   margin-top: 3%;
-  margin-left: 10%;
+  /* margin-left: 10%; */
   background-color: white;
-  width: 20%;
-  height: 20%;
+  width: 300px;
+  height: 90%;
   border-radius: 20px;
   cursor: pointer;
 
@@ -63,4 +63,9 @@
   height: 15px;
   width: 16px;
   margin-right: 5px;
+}
+
+.hotelImage {
+  height: 300px;
+  width: 300px;
 }
