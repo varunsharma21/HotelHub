@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+  width: 30%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster {
+  height: 100vh;
+  width: 70%;
+}
+
+.google-btn {
+  height: 40px;
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10%;
+  font-size: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: none;
+  background-color: #4285f4;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.google-btn img {
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  padding: 5px;
+}
+
+.google-btn:hover {
+  background-color: #357ae8;
+}
+
+.guest-btn {
+  height: 40px;
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+
+  margin-top: 10%;
+  background-color: rgb(125, 101, 140);
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.form p {
+  font-size: 22px;
+  color: rgb(48, 47, 47);
+}

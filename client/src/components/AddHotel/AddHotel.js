@@ -36,7 +36,7 @@ const AddHotel = () => {
   const [image, setImage] = useState();
 
   const backToHotels = () => {
-    navigate("/");
+    navigate("/hotels");
   };
 
   const handleChange = (e, stateKey) => {
