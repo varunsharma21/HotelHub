@@ -28,9 +28,24 @@
 }
 
 .add-hotel-btn {
-  width: 170px;
+  width: 220px;
   margin: 0 5% 0 0 !important;
   background-color: black !important;
   border-radius: 10px !important;
   font-size: 13px;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
 }

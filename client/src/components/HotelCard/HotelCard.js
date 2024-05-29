@@ -49,7 +49,8 @@ const HotelCard = (props) => {
       </div>
       <p className={styles.city}>{city}</p>
       <p className={styles.price}>
-        <span className={styles.minPrice}>₹ {minPrice}</span> / night
+        <span className={styles.minPrice}>₹ {minPrice.toLocaleString()}</span> /
+        night
       </p>
     </div>
   );

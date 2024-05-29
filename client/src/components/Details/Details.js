@@ -18,9 +18,11 @@ const Details = () => {
           <p className={styles.category}>{state.category}</p>
           <p className={styles.contactNumber}>{state.contactNumber}</p>
           <p className={styles.minPrice}>
-            Starting at just ₹{state.minPrice}/night
+            Starting at just ₹{state.minPrice.toLocaleString()}/night
           </p>
-          <p className={styles.maxPrice}>Till ₹{state.maxPrice}</p>
+          <p className={styles.maxPrice}>
+            Till ₹{state.maxPrice.toLocaleString()}
+          </p>
           <p className={styles.address}>{state.address}</p>
         </div>
       </div>

@@ -31,10 +31,6 @@ const ImagePicker = ({ onImageChange }) => {
     return `${urlParts[0]}/upload/${transformation}/${urlParts[1]}`;
   };
 
-  //   useEffect(() => {
-  //     console.log(image);
-  //   }, [image]);
-
   return (
     <div className={styles.container}>
       <input type="file" onChange={imageChangeHandler} />
