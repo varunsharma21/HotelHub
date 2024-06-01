@@ -49,3 +49,51 @@
   width: 60%;
   clip-path: polygon(100% 0, 0 20%, 60% 100%, 100% 100%);
 }
+
+@media only screen and (max-width: 1050px) {
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .showHotels {
+    /* position: fixed;
+    top: 0px;
+    left: -300px; */
+
+    margin: 0;
+  }
+
+  .right {
+    /* height: 150vh; */
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    /* height: 150vh; */
+    display: none;
+  }
+}

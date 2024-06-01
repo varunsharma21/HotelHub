@@ -95,3 +95,34 @@ hr {
   place-items: center;
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 1500px) {
+  .hotels-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .hotels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .hotels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hotels-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .price-filter {
+    width: 85%;
+  }
+}

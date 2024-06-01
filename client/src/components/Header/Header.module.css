@@ -33,6 +33,7 @@
   background-color: black !important;
   border-radius: 10px !important;
   font-size: 13px;
+  font-weight: normal !important;
 }
 
 .btns {
@@ -47,5 +48,32 @@
   margin-right: 5%;
   height: 20px;
   width: 20px;
+  cursor: pointer;
+}
+
+.add-hotel-btn-disabled {
+  background-color: grey;
+  height: 30px;
+  width: 190px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  margin: 0 5% 0 0;
+  color: white;
+}
+
+.sigin-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+}
+
+.sigin-options p {
+  color: grey;
+  font-size: 15px;
+  font-weight: 500;
+  width: 90px;
   cursor: pointer;
 }

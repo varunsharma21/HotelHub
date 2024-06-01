@@ -34,6 +34,7 @@ const AddHotel = () => {
 
   const [formData, setFormData] = useState(initialState);
   const [image, setImage] = useState();
+  const [clearImage, setClearImage] = useState(false);
 
   const backToHotels = () => {
     navigate("/hotels");
@@ -89,6 +90,11 @@ const AddHotel = () => {
     }
     console.log(formData);
     setFormData(initialState);
+    setImage(null);
+    setClearImage(true); // Trigger the clear image ref
+
+    // using setTimeout to avoid batching of setState functions.
+    setTimeout(() => setClearImage(false), 0); // Reset the state to allow future resets
     // navigate("/");
   };
 
@@ -114,7 +120,10 @@ const AddHotel = () => {
 
         {/* <input type="file" onChange={imageUploadHandler} /> */}
         <form className={styles.form} onSubmit={submitHandler}>
-          <ImagePicker onImageChange={handleImageChange} />
+          <ImagePicker
+            onImageChange={handleImageChange}
+            clearImage={clearImage}
+          />
           {inputInfo.map((info, index) => (
             <TextField
               className={styles.input}

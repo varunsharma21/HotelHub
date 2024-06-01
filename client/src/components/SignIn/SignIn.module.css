@@ -65,3 +65,52 @@
   font-size: 22px;
   color: rgb(136, 134, 134);
 }
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .poster {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .form {
+    z-index: 2;
+    width: 100%;
+    margin-top: -30%;
+  }
+
+  .form p {
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .poster {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .form {
+    z-index: 2;
+    width: 100%;
+    margin-top: -45%;
+  }
+
+  .form p {
+    color: white;
+  }
+
+  .google-btn,
+  .guest-btn {
+    width: 70%;
+  }
+}

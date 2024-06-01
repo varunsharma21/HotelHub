@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./ImagePicker.module.css";
 
-const ImagePicker = ({ onImageChange }) => {
-  const [image, setImage] = useState();
+const ImagePicker = ({ onImageChange, clearImage }) => {
+  const fileInputRef = useRef();
 
   const cloud_name = "dyno3yyw6";
   const preset_key = "hotel-hub";
@@ -31,9 +31,15 @@ const ImagePicker = ({ onImageChange }) => {
     return `${urlParts[0]}/upload/${transformation}/${urlParts[1]}`;
   };
 
+  useEffect(() => {
+    if (clearImage && fileInputRef.current.value !== null) {
+      fileInputRef.current.value = null;
+    }
+  }, [clearImage]);
+
   return (
     <div className={styles.container}>
-      <input type="file" onChange={imageChangeHandler} />
+      <input type="file" ref={fileInputRef} onChange={imageChangeHandler} />
     </div>
   );
 };
