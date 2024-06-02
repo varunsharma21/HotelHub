@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Screenshots
+<img src="https://github.com/varunsharma21/HotelHub/assets/61429136/c5780b5e-bca2-4d31-ac76-d50c4f0313d7" width="500" height="300" />
+
 ## Available Scripts
 
 In the project directory, you can run:
