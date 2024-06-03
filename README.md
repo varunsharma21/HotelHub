@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <img src="https://github.com/varunsharma21/HotelHub/assets/61429136/f710ca03-99ae-4020-88ff-7daa08856efe)" width="650" height="350" />
 <img src="https://github.com/varunsharma21/HotelHub/assets/61429136/647728cb-534d-42d9-8210-a38f7f604f6a)" width="650" height="350" />
 
-<img src="https://github.com/varunsharma21/HotelHub/assets/61429136/704a62d8-356d-4be1-813e-b41d688bbba7)" width="650" height="350" />
+<img src="https://github.com/varunsharma21/HotelHub/assets/61429136/ac37f959-29df-4c70-9034-7c3d2fecdf3c)" width="650" height="350" />
 <img src="https://github.com/varunsharma21/HotelHub/assets/61429136/86b24666-4969-401f-88a2-fb9221bd6626)" width="650" height="350" />
 
 ## Available Scripts
