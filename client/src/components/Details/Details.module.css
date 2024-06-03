@@ -27,42 +27,58 @@
   border-radius: 20px 0 0 20px;
 }
 
+.hotel-info {
+  width: 50%;
+}
+
 .hotel-info p {
-  margin-left: 5%;
+  margin-left: 15%;
 }
 
 .name {
-  margin: 10px 0 10px 0;
-  font-size: 35px;
+  margin: 7% 0 10px 0;
+  font-size: 60px;
+  font-weight: 500;
 }
 
 .city {
   margin-bottom: 10px;
-  font-size: 25px;
+  font-size: 30px;
+  font-weight: 500;
 }
 
 .rating {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 25px;
+  color: rgb(35, 35, 35);
 }
 
 .category {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 25px;
+  color: rgb(35, 35, 35);
 }
 
 .contactNumber {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 25px;
+  color: rgb(35, 35, 35);
 }
 
 .minPrice,
 .maxPrice {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 25px;
+  color: rgb(35, 35, 35);
 }
 
 .address {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 25px;
+  color: rgb(35, 35, 35);
+  line-height: 40px;
+}
+
+.highlighted {
+  color: grey;
 }

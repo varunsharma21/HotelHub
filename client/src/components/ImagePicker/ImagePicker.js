@@ -39,7 +39,15 @@ const ImagePicker = ({ onImageChange, clearImage }) => {
 
   return (
     <div className={styles.container}>
-      <input type="file" ref={fileInputRef} onChange={imageChangeHandler} />
+      <label for="files" class="btn">
+        Hotel Image
+      </label>
+      <input
+        id="files"
+        type="file"
+        ref={fileInputRef}
+        onChange={imageChangeHandler}
+      />
     </div>
   );
 };

@@ -14,16 +14,27 @@ const Details = () => {
         <div className={styles["hotel-info"]}>
           <p className={styles.name}>{state.hotelName}</p>
           <p className={styles.city}> {state.city}</p>
-          <p className={styles.rating}>{state.starRating}/5</p>
-          <p className={styles.category}>{state.category}</p>
-          <p className={styles.contactNumber}>{state.contactNumber}</p>
+          <p className={styles.rating}>
+            <span className={styles.highlighted}>Rating:</span>{" "}
+            {state.starRating} / 5
+          </p>
+          <p className={styles.category}>
+            <span className={styles.highlighted}>Category: </span>
+            {state.category}
+          </p>
+          <p className={styles.contactNumber}>
+            <span className={styles.highlighted}>Contact Number: </span>
+            {state.contactNumber}
+          </p>
           <p className={styles.minPrice}>
-            Starting at just ₹{state.minPrice.toLocaleString()}/night
+            <span className={styles.highlighted}>Price Range: </span>
+            {state.minPrice.toLocaleString()} -{" "}
+            {state.maxPrice.toLocaleString()} / night
           </p>
-          <p className={styles.maxPrice}>
-            Till ₹{state.maxPrice.toLocaleString()}
+          <p className={styles.address}>
+            <span className={styles.highlighted}>Address: </span>
+            {state.address}
           </p>
-          <p className={styles.address}>{state.address}</p>
         </div>
       </div>
     </div>
